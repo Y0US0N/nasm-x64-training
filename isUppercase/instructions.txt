@@ -1,0 +1,8 @@
+[1] Reads a character from standard input (the keyboard).
+
+[2] Check if this character is an uppercase letter (A-Z).
+
+[3] If it is, displays : "Uppercase"
+Else, displays : "Not uppercase"
+
+[4] Terminate the program cleany with return code 0.

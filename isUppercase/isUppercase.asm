@@ -13,7 +13,7 @@ section .data
 	STDIN equ 0
 	STDOUT equ 1
 
-	ErrorMsg db "The standart input must contain 1 character", 0x0A ; message if argument is not 1 character
+	ErrorMsg db "The standard input must contain 1 character", 0x0A ; message if argument is not 1 character
 	ErrorLen equ $-ErrorMsg ; length of the error message
 	AffirmativeMsg: db "Uppercase", 0x0A ; message if character is a capital letter
 	AffirmativeLen: equ $-AffirmativeMsg ; length of the affirmative message
