@@ -1,0 +1,5 @@
+[1] Displays the following message on standard output : "Hello, NASM!"
+
+[2] Start a new line after the message.
+
+[3] It terminates cleany with a return code of 0.
