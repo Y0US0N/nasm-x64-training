@@ -34,25 +34,25 @@ _start:
 	mov rdx, 1 ; buffer length
 	syscall ; system call
 	
-	cmp rax, 1 ; ; if input is not 1 character
-	jne .Error
+	cmp rax, 1
+	jne .Error ; if input is not 1 character
 
-	cmp byte [Buffer], 'A' ; if buffer < 'A'
-	jb .Negative
+	mov al, [Buffer]
+	sub al, 'A'
+	cmp al, ('Z'-'A')
+	ja .Negative ; if not ('A' <= buffer <= 'Z')
 
-	cmp byte [Buffer], 'Z' ; if buffer > 'Z'
-	ja .Negative
-
-	jmp .Affirmative ; else
-
-.Affirmative:
+	; else
 	mov rax, SYS_WRITE ; 1 = sys_write
 	mov rdi, STDOUT ; 1 = stdout (file descriptor)
 	mov rsi, AffirmativeMsg ; pointer to the string
 	mov rdx, AffirmativeLen ; length string
 	syscall ; system call
 
-	jmp .Exit_program
+.Exit_program:
+	mov rax, SYS_EXIT ; 60 = sys_exit
+	mov rdi, 0 ; 0 = nothing to return
+	syscall ; system call
 
 .Negative:
 	mov rax, SYS_WRITE ; 1 = sys_write
@@ -62,11 +62,6 @@ _start:
 	syscall ; system call
 
 	jmp .Exit_program
-
-.Exit_program:
-	mov rax, SYS_EXIT ; 60 = sys_exit
-	mov rdi, 0 ; 0 = nothing to return
-	syscall ; system call
 
 .Error:
 	mov rax, SYS_WRITE ; 1 = sys_write
