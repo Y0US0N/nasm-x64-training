@@ -1,0 +1,5 @@
+[1] Reads a lowercase character (a-z).
+
+[2] Converts it to uppercase.
+
+[3] Displays it.

@@ -3,7 +3,7 @@
 ; Created date    : 2/16/2026
 ; Last update     : 2/16/2026
 ; Author          : Youson
-; Description     : Show message "Hello, NASM!"
+; Description     : Shows message "Hello, NASM!"
 
 section .data
 	HelloMsg: db "Hello, NASM!", 0x0A ; message to display in the terminal
