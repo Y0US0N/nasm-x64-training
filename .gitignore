@@ -1,0 +1,11 @@
+# Object files
+*.o
+
+# Executables
+*.out
+*.exe
+*.bin
+
+# Temporary files editors
+*.swp
+*~
