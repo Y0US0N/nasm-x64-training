@@ -1,0 +1,5 @@
+[1] Reads up to 32 characters.
+
+[2] Converts all lowercase letters to uppercase.
+
+[3] Displays the result.
