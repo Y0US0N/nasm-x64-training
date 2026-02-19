@@ -1,0 +1,5 @@
+[1] Reads a string from the stdin (32 bytes).
+
+[2] Find the length up to '\n'.
+
+[3] Show length in decimal.
